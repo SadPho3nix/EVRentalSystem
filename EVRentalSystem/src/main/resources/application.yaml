@@ -17,6 +17,6 @@ jwt:
 server:
   port: 8084
   servlet:
-    context-path: /PhoneShop
+    context-path: /Ten
 
 
