@@ -1,4 +1,4 @@
-package com.evrentalsystem.EVRentalSystem;
+package com.evrentalsystem.evRentalSystem;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

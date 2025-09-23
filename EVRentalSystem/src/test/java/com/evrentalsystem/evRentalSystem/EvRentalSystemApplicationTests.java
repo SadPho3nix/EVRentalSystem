@@ -1,4 +1,4 @@
-package com.evrentalsystem.EVRentalSystem;
+package com.evrentalsystem.evRentalSystem;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
