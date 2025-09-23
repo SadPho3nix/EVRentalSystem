@@ -11,18 +11,23 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "Payment")
 public class Payment {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "payment_id")
     private Long paymentId;
 
-    private Double total;
-    private LocalDateTime paidAt;
-
     @OneToOne
-    @JoinColumn(name = "order_id", unique = true)
+    @JoinColumn(name = "order_id", nullable = false, unique = true)
     private Order order;
+
+    @Column(nullable = false, precision = 10, scale = 2)
+    private Double total;
 
     @ManyToOne
     @JoinColumn(name = "method_id", nullable = false)
     private PaymentMethod method;
+
+    @Column(name = "paid_at", nullable = false)
+    private LocalDateTime paidAt;
 }

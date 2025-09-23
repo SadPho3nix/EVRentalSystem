@@ -2,7 +2,6 @@ package com.evrentalsystem.evRentalSystem.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -11,14 +10,18 @@ import java.util.List;
 @Entity
 @Table(name = "Penalty_Type")
 public class PenaltyType {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "penalty_type_id")
     private Long penaltyTypeId;
 
+    @Column(name = "type_name", nullable = false, length = 100)
     private String typeName;
-    private String description;
-    private Double baseFee;
 
-    @ManyToMany(mappedBy = "penaltyTypes")
-    private List<Penalty> penalties;
+    @Column(columnDefinition = "VARCHAR(MAX)")
+    private String description;
+
+    @Column(name = "base_fee", nullable = false, precision = 10, scale = 2)
+    private Double baseFee;
 }
