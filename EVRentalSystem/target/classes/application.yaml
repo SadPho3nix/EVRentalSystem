@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=EVRentalSystem;encrypt=false;trustServerCertificate=true
+    username: sa
+    password: 12345
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.SQLServerDialect
+    show-sql: true
+
+jwt:
+  signerKey: "HI1DB+373eadn1zSc0EmRcN74DSQJQwcPbbcCL5Y0DskR7SV1MUfHwkMEeGhupYO"
+
+server:
+  port: 8084
+  servlet:
+    context-path: /EVRentalSystem
+
+
