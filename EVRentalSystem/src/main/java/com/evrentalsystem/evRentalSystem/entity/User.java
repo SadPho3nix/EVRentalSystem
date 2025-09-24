@@ -20,7 +20,6 @@ public class User {
 
     @Column(nullable = false, length = 255)
     private String password;
-
     private String fullName;
     private String phone;
     private String email;

@@ -2,6 +2,8 @@ package com.evrentalsystem.evRentalSystem.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Data
@@ -26,7 +28,7 @@ public class Penalty {
     private PenaltyType penaltyType;
 
     @Column(nullable = false, precision = 10, scale = 2)
-    private Double amount;
+    private BigDecimal amount;
 
     @Column(columnDefinition = "VARCHAR(MAX)")
     private String notes;

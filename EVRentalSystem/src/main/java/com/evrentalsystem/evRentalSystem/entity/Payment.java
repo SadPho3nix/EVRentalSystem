@@ -2,6 +2,8 @@ package com.evrentalsystem.evRentalSystem.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Data
@@ -22,7 +24,7 @@ public class Payment {
     private Order order;
 
     @Column(nullable = false, precision = 10, scale = 2)
-    private Double total;
+    private BigDecimal total;
 
     @ManyToOne
     @JoinColumn(name = "method_id", nullable = false)

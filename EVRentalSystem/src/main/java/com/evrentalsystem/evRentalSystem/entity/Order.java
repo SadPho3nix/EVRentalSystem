@@ -3,6 +3,7 @@ package com.evrentalsystem.evRentalSystem.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
@@ -41,7 +42,7 @@ public class Order {
     private LocalDateTime actualReturnTime;
 
     @Column(nullable = false)
-    private Double deposit;
+    private BigDecimal deposit;
 
     @Column(nullable = false)
     private String status; // PENDING / CONFIRMED / COMPLETED / CANCELLED

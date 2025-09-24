@@ -5,6 +5,7 @@ import lombok.*;
 
 @Data
 @NoArgsConstructor
+@Builder
 @AllArgsConstructor
 @Entity
 @Table(name = "Renter_Detail")
@@ -17,7 +18,7 @@ public class RenterDetail {
     @OneToOne
     @MapsId
     @JoinColumn(name = "renter_id")
-    private User user;
+    private User renter;
 
     @Column(nullable = false, length = 50)
     private String idNumber;

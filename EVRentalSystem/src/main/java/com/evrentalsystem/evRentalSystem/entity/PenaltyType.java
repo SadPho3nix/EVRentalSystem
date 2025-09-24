@@ -3,6 +3,8 @@ package com.evrentalsystem.evRentalSystem.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -23,5 +25,5 @@ public class PenaltyType {
     private String description;
 
     @Column(name = "base_fee", nullable = false, precision = 10, scale = 2)
-    private Double baseFee;
+    private BigDecimal baseFee;
 }
