@@ -1,5 +1,6 @@
 package com.evrentalsystem.evRentalSystem.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDateTime;
@@ -21,6 +22,7 @@ public class User {
     @Column(nullable = false, length = 255)
     private String password;
 
+    @JsonProperty("full_Name")
     @Column(name = "full_Name")
     private String fullName;
 

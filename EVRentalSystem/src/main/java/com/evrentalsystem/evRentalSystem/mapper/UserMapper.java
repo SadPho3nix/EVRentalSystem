@@ -9,6 +9,7 @@ import org.mapstruct.Mapping;
 public interface UserMapper {
     //Convert request thanh` user
     @Mapping(target = "userId", ignore = true)
+    @Mapping(source = "fullName", target = "fullName")
     @Mapping(target = "createdAt", expression = "java(java.time.LocalDateTime.now())")
     @Mapping(target = "status", constant = "ACTIVE")
     @Mapping(target = "role", ignore = true)
